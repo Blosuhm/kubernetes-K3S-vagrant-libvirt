@@ -46,9 +46,7 @@ cd kubernetes-K3S-vagrant-libvirt
 
 ## Optional Modifications ⚙️
 
-### Add More Workers
-
-To increase the number of worker nodes, change the `NodeCount`,`CPU` and `RAM` for the master and workers in the variables inside the `Vagrantfile`:
+To increase the number of worker nodes or adjust CPU and RAM, change the `NodeCount`,`CPU` and `Memory` for the master and workers in the variables inside the `Vagrantfile`:
 
 ```ruby
 Vagrant.configure(2) do |config|
