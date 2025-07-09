@@ -16,7 +16,7 @@ Before you begin, ensure your system meets the following prerequisites:
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) - To manage the cluster locally outside vm.
 - [Libvirt manager](https://libvirt.org/) - Libvirt virtual machine manager
 - Hypervisor - Supported Hypervisor like kvm/QEMU
-- *Optional*[OpenLens](https://github.com/MuhammedKalkan/OpenLens) - Gui for managing and troubleshooting Kubernetes.
+- (*Optional*)[OpenLens](https://github.com/MuhammedKalkan/OpenLens) - Gui for managing and troubleshooting Kubernetes.
 
 ## Installation Instructions 🔧
 
