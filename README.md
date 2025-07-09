@@ -28,7 +28,7 @@ Follow these steps to set up the Kubernetes K3S cluster:
 git clone https://github.com/fungame2270/kubernetes-K3S-vagrant-libvirt.git
 ```
 
-2. **Start the Cluster**: Navigate to the cloned repository folder (where the `Scripts` are located "`start.sh`" and "`destroy.sh`") and execute the start.sh:
+2. **Start the Cluster**: Navigate to the cloned repository folder (where the `Scripts` are located "`start.sh`" and "`destroy.sh`") and execute the `start.sh`:
 
 ```bash
 cd kubernetes-K3S-vagrant-libvirt
