@@ -42,7 +42,7 @@ cd kubernetes-K3S-vagrant-libvirt
 ```
 
 > [!NOTE]  
-> The script will ask for sudo permission to change the kube config ownership and permissions. Vagrant will ask too.
+> The script will ask for sudo permission to change the kube config ownership and permissions. Vagrant will ask too because of NFS for `start.sh` and `destroy.sh`.
 
 ## Optional Modifications ⚙️
 
