@@ -8,3 +8,7 @@ vagrant destroy -f
 
 echo "[Task 3] remove config"
 rm ~/.kube/config
+
+echo "[Task 4] remove registry.localhost to /etc/hosts"
+
+sudo sed -i '/registry.localhost/d' /etc/hosts
