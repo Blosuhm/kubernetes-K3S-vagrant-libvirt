@@ -23,6 +23,11 @@ else
   echo "[INFO] registry.localhost already exists in /etc/hosts"
 fi
 
+echo "[INFO] adding insecure registry to docker"
+
+echo '{ "insecure-registries" : ["registry.localhost:80"] }' | sudo tee /etc/docker/daemon.json
+sudo systemctl restart docker
+
 echo "[INFO] Done."
 
 echo "==============================="

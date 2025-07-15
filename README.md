@@ -7,6 +7,7 @@ This repository provides a simple way to set up a Kubernetes K3S cluster using V
 - **Easy Setup**: With just a command you have a simple K3S cluster.
 - **Customization Options**: There are separated varibles to edit in the vagrant file to change number of workers, cpu and ram.
 - **Export kube config**: The start command copies the kube config file to the local machine that allows local connection using kubctl. 
+- **Docker Registry**: It contains a local docker registry to push your images to the cluster.
 
 ## System Prerequisites 📋
 
@@ -35,7 +36,13 @@ cd kubernetes-K3S-vagrant-libvirt
 ./start.sh
 ```
 
-3. **Destroy the Cluster**: Simply run the `destroy.sh` it will stop the vms and delete the config file and join cluster file:
+3. **Tag and push a image**: you can push images into to the registry from the host
+```bash
+docker tag busybox registry.localhost/busybox
+docker push registry.localhost/busybox
+```
+
+4. **Destroy the Cluster**: Simply run the `destroy.sh` it will stop the vms and delete the config file and join cluster file:
 
 ```bash
 ./destroy.sh

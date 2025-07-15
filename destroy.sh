@@ -12,3 +12,7 @@ rm ~/.kube/config
 echo "[Task 4] remove registry.localhost to /etc/hosts"
 
 sudo sed -i '/registry.localhost/d' /etc/hosts
+
+echo "[Task 5] removing insecure registry from docker"
+sudo rm -f /etc/docker/daemon.json
+sudo systemctl restart docker
