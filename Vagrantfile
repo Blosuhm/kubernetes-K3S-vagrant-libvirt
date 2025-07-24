@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
   
   # global requirements
   config.vm.provision "shell", path: "./auxiliar_scripts/requirements.sh", :args => NodeCount
-  config.vm.box = "alvistack/ubuntu-24.04" # change if needed 
+  config.vm.box = "bento/ubuntu-24.04" # change if needed 
   config.vm.synced_folder './', '/vagrant', type: 'nfs', nfs_udp: false, nfs_version: 4
 
   # K3S Master
