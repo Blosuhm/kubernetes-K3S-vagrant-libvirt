@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "[Task 1] starting vagrant"
-vagrant up
+vagrant up --no-parallel
 
 echo "[Task 2] activate kubectl"
 
