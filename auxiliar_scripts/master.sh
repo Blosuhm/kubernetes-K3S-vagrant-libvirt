@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 echo "[TASK 1] Create K3S Kubernetes Cluster"
 curl -sfL https://get.k3s.io | sh -
 

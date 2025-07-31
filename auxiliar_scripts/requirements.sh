@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 echo "[TASK 1] update hosts"
 echo '192.168.10.100 master master' | tee -a /etc/hosts
 echo '192.168.10.100 registry.localhost' | tee -a /etc/hosts

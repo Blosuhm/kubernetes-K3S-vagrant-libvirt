@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 echo "[INFO] Waiting for joincluster.sh to become available..."
 while [ ! -f /vagrant/auxiliar_scripts/joincluster.sh ]; do
   sleep 2
