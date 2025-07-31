@@ -20,7 +20,6 @@ Vagrant.configure(2) do |config|
   config.vm.define "master" do |master|
     master.vm.hostname = "master"
     master.vm.network "private_network", ip: "192.168.10.100"
-    master.vm.network "private_network", type: "dhcp"
     master.vm.network "forwarded_port", guest: 6443, host: 6443, auto_correct: true
     master.vm.provider Provider do |v|
       v.memory = MasterMemory
@@ -35,7 +34,6 @@ Vagrant.configure(2) do |config|
     config.vm.define "worker#{i}" do |worker|
       worker.vm.hostname = "worker#{i}"
       worker.vm.network "private_network", ip: "192.168.10.#{i+1}"
-      worker.vm.network "private_network", type: "dhcp"
       worker.vm.provider Provider do |v|
         v.memory = WorkerMemory
         v.cpus = WorkerCpu
