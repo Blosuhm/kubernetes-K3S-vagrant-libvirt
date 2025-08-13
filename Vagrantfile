@@ -24,6 +24,7 @@ Vagrant.configure(2) do |config|
     master.vm.provider Provider do |v|
       v.memory = MasterMemory
       v.cpus = MasterCpu
+      v.cpu_model = "host"
     end
     master.vm.provision "shell", path: "./auxiliar_scripts/master.sh"
     master.vm.box_download_insecure = true
@@ -37,6 +38,7 @@ Vagrant.configure(2) do |config|
       worker.vm.provider Provider do |v|
         v.memory = WorkerMemory
         v.cpus = WorkerCpu
+        v.cpu_model = "host"
       end
       worker.vm.provision "shell", path: "./auxiliar_scripts/worker.sh"
       worker.vm.box_download_insecure = true
